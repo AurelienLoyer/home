@@ -1,0 +1,8 @@
+platform: template
+sensors:
+  car_lights:
+    friendly_name: 'Car lights'
+    value_template: '{{ states.sensor.car_vehicle_data.attributes.signals.HeadLightSts.value |float > 0 }}'
+  car_running:
+    friendly_name: 'Car running'
+    value_template: '{{ states.sensor.car_vehicle_data.attributes.signals.ComputedEngineState.value |float > 0  }}'

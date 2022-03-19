@@ -14,7 +14,10 @@ config/.HA_VERSION
 config/.cloud
 config/.storage
 config/deps
+config/custom_components/meross_cloud
+config/custom_components/meross_cloud_old
 
+## Config secret file
 config/secrets.yaml
 
 # Generic ignores

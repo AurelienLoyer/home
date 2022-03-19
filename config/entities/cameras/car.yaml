@@ -1,4 +1,4 @@
 ---
 platform: generic
 name: car
-still_image_url: https://static-maps.yandex.ru/1.x/?lang=en-US&ll={{ states.sensor.car_vehicle_data.attributes.location.latitude }},{{ states.sensor.car_vehicle_data.attributes.location.longitude }}&z=13&l=map,skl&size=600,300
+still_image_url: "https://maps.geoapify.com/v1/staticmap?style=osm-carto&width=600&height=400&center=lonlat:{{ states(('sensor.car_longitude')) }},{{ states(('sensor.car_latitude')) }}&zoom=18&marker=lonlat:{{ states(('sensor.car_longitude')) }},{{ states(('sensor.car_latitude')) }};type:awesome;color:%23e01401&apiKey=1b48259b810e48ddb151889f9ea58db0"
