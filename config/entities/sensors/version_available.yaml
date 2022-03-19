@@ -3,8 +3,8 @@
 # available version online.
 #
 # https://www.home-assistant.io/integrations/sensor.version/
-#
-platform: version
-name: version_available
-source: hassio
-image: qemux86-64
+# 
+# platform: version
+# name: version_available
+# source: hassio
+# image: qemux86-64

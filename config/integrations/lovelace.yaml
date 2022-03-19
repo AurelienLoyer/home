@@ -8,6 +8,7 @@
 # https://www.home-assistant.io/lovelace/yaml-mode/
 #
 lovelace:
+  mode: yaml
   resources:
     - type: js
       url: /local/synthwave-hass-extras.js
