@@ -25,7 +25,7 @@ https://phoscon.de/en/conbee/install#docker
 
 - Website: https://aurelien-loyer.fr
 - Twitter: [@AurelienLoyer](https://twitter.com/AurelienLoyer)
-- Github: [@T3kstiil3](https://github.com/T3kstiil3)
+- Github: [@T3kstiil3](https://github.com/AurelienLoyer)
 - LinkedIn: [@aurelien-loyer](https://linkedin.com/in/aurelien-loyer)
 
 ## Show your support
