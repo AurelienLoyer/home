@@ -1,16 +1,16 @@
 ---
 version: '3'
 services:
-  homeassistant:
-    container_name: home-assistant
-    image: homeassistant/home-assistant:stable
+  han:
+    build: han
+    container_name: han
     volumes:
       - /home/pi/homeassistant/config:/config
     environment:
       - TZ=Europe/Paris
     restart: always
     network_mode: host
-  
+    
   deconz:
     image: marthoc/deconz
     container_name: deconz

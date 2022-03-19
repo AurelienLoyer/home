@@ -9,5 +9,8 @@ trigger:
     event: start
 
 action:
+  - wait_template: >
+      true
+    timeout: 00:03  # Waits 3 minutes
+    continue_on_timeout: false
   - service: homekit.start
-  - delay: 00:02

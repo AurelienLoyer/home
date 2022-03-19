@@ -13,5 +13,61 @@
 # The configuration.yaml is only used to bootstrap the system.
 #
 homeassistant:
+
+  name: My home
+  elevation: 0
+  unit_system: metric
+  time_zone: Europe/Paris
+
+  latitude: !secret zone_home_latitude
+  longitude: !secret zone_home_longitude
+
+  # Lets me customize individual entities
+  # customize: !include_dir_merge_named ../customizations/entities
+  customize:
+    sensor.octoprint_actual_tool0_temp:
+      device_class: temperature
+    sensor.octoprint_actual_bed_temp:
+      device_class: temperature
+    sensor.rpi_cpu_temperature:
+      device_class: temperature
+    sensor.car_lights:
+      device_class: light
+      icon: mdi:lightbulb
+    sensor.car_pressure:
+      icon: mdi:snowflake
+      device_class: pressure
+    sensor.car_battery:
+      device_class: voltage
+      icon: mdi:car-battery
+    sensor.car_fuel:
+      icon: mdi:fuel
+    sensor.car_fuel_perc:
+      device_class: power_factor
+      icon: mdi:fuel
+
+  # Lets me custimize all entities in a domain
+  customize_domain: !include_dir_merge_named ../customizations/domains
+
+  # Lets me custimize entities based on a matching pattern
+  customize_glob: !include_dir_merge_named ../customizations/globs
+
   # Load packages
   packages: !include_dir_named integrations
+
+hue:
+  bridges:
+    - host: 192.168.1.10
+      allow_unreachable: true
+      allow_hue_groups: true
+
+meross_cloud:
+  username: !secret meross_username
+  password: !secret meross_password
+
+duckdns:
+  domain: !secret duckdns_domain
+  access_token: !secret duckdns_access_token
+
+http:
+  base_url: !secret http_base_url
