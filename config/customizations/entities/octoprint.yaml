@@ -1,0 +1,14 @@
+---
+#
+# Customizes the octoprint sensors
+#
+# https://www.home-assistant.io/docs/configuration/customizing-devices/
+# https://www.home-assistant.io/integrations/binary_sensor/
+#
+
+binary_sensor.octoprint_printing:
+  device_class: power
+
+binary_sensor.octoprint_printing_error:
+  device_class: problem
+

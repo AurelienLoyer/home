@@ -1,0 +1,9 @@
+---
+#
+# Customizes the coinbase custom sensor
+#
+# https://www.home-assistant.io/docs/configuration/customizing-devices/
+#
+
+sensor.octoprint_actual_bed_temp:
+  device_class: temperature
