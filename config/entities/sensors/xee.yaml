@@ -1,0 +1,17 @@
+---
+#
+# Xee car captor
+# Get data and refresh token from this awesome nodejs scripts !
+# How to buy : https://amzn.to/2LUn95x
+# Thanks to : https://medium.com/@redteamwins/how-i-integrated-a-xee-connected-car-in-home-assistant-dd609a91213c
+#
+
+platform: command_line
+name: car_vehicle_data
+command: 'node /config/entities/scripts/xee/index.js'
+json_attributes:
+  - signals
+  - location
+  - updatedAt
+value_template: ''
+scan_interval: 300

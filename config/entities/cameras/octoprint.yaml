@@ -1,0 +1,8 @@
+---
+#
+# https://www.home-assistant.io/integrations/octoprint/
+# 
+platform: mjpeg
+name: OctoPrint
+mjpeg_url: !secret octoprint_mjpeg_url
+still_image_url: !secret octoprint_still_image_url

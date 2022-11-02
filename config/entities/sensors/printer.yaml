@@ -1,0 +1,13 @@
+---
+
+# https://www.home-assistant.io/integrations/epsonworkforce/
+
+platform: epsonworkforce
+host: 192.168.1.51
+monitored_conditions:
+- black
+- photoblack
+- yellow
+- magenta
+- cyan
+- clean

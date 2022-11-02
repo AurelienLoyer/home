@@ -1,0 +1,13 @@
+---
+sensor.car_lock:
+  icon: mdi:lock
+sensor.car_speed:
+  icon: mdi:speedometer
+sensor.car_total_km:
+  icon: mdi:arrow-right-bold
+sensor.car_update_date:
+  icon: mdi:car-connected
+sensor.car_engine_state:
+  icon: mdi:engine
+group.car_view:
+  order: 3

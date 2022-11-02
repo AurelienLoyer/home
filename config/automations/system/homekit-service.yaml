@@ -1,0 +1,16 @@
+---
+alias: Start HomeKit
+description: >-
+  Start HomeKit service after 2 minutes
+  To be sure all components are ready
+
+trigger:
+  - platform: homeassistant
+    event: start
+
+action:
+  - wait_template: >
+      true
+    timeout: 00:03  # Waits 3 minutes
+    continue_on_timeout: false
+  - service: homekit.start

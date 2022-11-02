@@ -1,0 +1,5 @@
+---
+name: FreeMobile
+platform: free_mobile
+username: !secret free_mobile_username
+access_token: !secret free_mobile_access_token

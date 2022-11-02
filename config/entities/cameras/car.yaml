@@ -1,0 +1,4 @@
+---
+platform: generic
+name: car
+still_image_url: "https://maps.geoapify.com/v1/staticmap?style=osm-carto&width=600&height=400&center=lonlat:{{ states(('sensor.car_longitude')) }},{{ states(('sensor.car_latitude')) }}&zoom=18&marker=lonlat:{{ states(('sensor.car_longitude')) }},{{ states(('sensor.car_latitude')) }};type:awesome;color:%23e01401&apiKey=1b48259b810e48ddb151889f9ea58db0"

@@ -1,0 +1,47 @@
+platform: template
+sensors:
+  car_battery:
+    friendly_name: 'Battery'
+    value_template: '{{ states.sensor.car_vehicle_data.attributes.signals.BatteryVoltage.value }}'    
+    unit_of_measurement: 'V'     
+  # car_lock:
+  #   friendly_name: 'Lock'
+  #   value_template: >-
+  #     {% if states.sensor.car_vehicle_data.attributes.signals[18].value == 1 %}
+  #       Locked
+  #     {% else %}
+  #       Unlocked
+  #     {% endif %}
+  car_speed:
+    friendly_name: 'Speed'
+    value_template: '{{ states.sensor.car_vehicle_data.attributes.signals.EngineSpeed.value }}'
+    unit_of_measurement: 'Km/h'
+  car_fuel:
+    friendly_name: 'Fuel'
+    value_template: '{{ states.sensor.car_vehicle_data.attributes.signals.FuelLevel.value }}'
+    unit_of_measurement: 'L'
+  car_fuel_perc:
+    friendly_name: 'Fuel'
+    value_template: '{{ states.sensor.car_vehicle_data.attributes.signals.FuelLevel.value * 2.5 }}'
+    unit_of_measurement: '%'
+  car_pressure:
+    friendly_name: 'Coolant pressure'
+    value_template: '{{ states.sensor.car_vehicle_data.attributes.signals.CoolantPressure.value }}'
+    unit_of_measurement: 'bar'
+  car_total_km:
+    friendly_name: 'Total Km'
+    value_template: '{{ states.sensor.car_vehicle_data.attributes.signals.Odometer.value }}'
+    unit_of_measurement: 'km'
+  car_engine_state:
+    friendly_name: 'Engine State'
+    value_template: '{{ states.sensor.car_vehicle_data.attributes.signals.ComputedEngineState.value }}'
+    unit_of_measurement: 'tr/min'
+  # car_update_date:
+    # friendly_name: 'Update Date'
+    # value_template: "{{ as_timestamp(states.sensor.car_vehicle_data.attributes.updatedAt) | timestamp_custom('%D %-I:%M %P') }}"
+  car_latitude:
+    friendly_name: 'Latitude'
+    value_template: '{{ states.sensor.car_vehicle_data.attributes.location.latitude }}'
+  car_longitude:
+    friendly_name: 'Longitude'
+    value_template: '{{ states.sensor.car_vehicle_data.attributes.location.longitude }}'
